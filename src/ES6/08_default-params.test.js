@@ -4,13 +4,13 @@
 describe('default parameters make function parameters more flexible', () => {
 
   it('define it using an assignment to the parameter `function(param=1){}`', () => {
-    let number = (int) => int
+    let number = (int=0) => int
 
     expect(number()).toEqual(0)
   })
 
   it('it is not used when a value is given', () => {
-    function xhr() {
+    function xhr(method='data') {
       return method
     }
 
@@ -18,7 +18,7 @@ describe('default parameters make function parameters more flexible', () => {
   })
 
   it('it is evaluated at run time', () => {
-    let defaultValue
+    let defaultValue = 42
     function xhr(method = `value: ${defaultValue}`) {
       return method
     }
@@ -28,7 +28,7 @@ describe('default parameters make function parameters more flexible', () => {
   })
 
   it('it can also be a function', () => {
-    let defaultValue
+    let defaultValue = () => 33
     function fn(value = defaultValue()) {
       return value
     }

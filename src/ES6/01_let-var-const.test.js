@@ -15,7 +15,7 @@ describe('var, let, const', () => {
     it('what do you expect???', () => {
       const actual = iterator(false)
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(undefined)
     })
   })
 
@@ -34,7 +34,7 @@ describe('var, let, const', () => {
 
       const actual = iterator()
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual('nodejs')
     })
   })
 
@@ -52,7 +52,7 @@ describe('var, let, const', () => {
 
       const actual = iterator()
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual('nodejs')
     })
   })
 })

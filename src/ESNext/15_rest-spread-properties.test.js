@@ -9,14 +9,14 @@ describe('spread with object properties', () => {
   }
 
   it('extracts each property item using the old way', () => {
-    const name = __
-    const surname = __
+    const name = person.name
+    const surname = person.surname
     expect(name).toEqual('Paco')
     expect(surname).toEqual('Pil')
   })
 
   it('extracts each property item using the new method', () => {
-
+    const {name, surname} = person
     expect(name).toEqual('Paco')
     expect(surname).toEqual('Pil')
   })
@@ -29,7 +29,10 @@ describe('spread with object properties', () => {
     }
 
     // How you add new properties ?
-
+    myCar.wheels = 6
+    myCar.topSpeed = 250
+    myCar.color = 'red'
+    myCar.plate = '123EF'
 
     expect(myCar).toEqual({
       wheels: 6,
@@ -56,7 +59,10 @@ describe('spread with object properties', () => {
     }
 
     // How you add new properties to myCar ?
-
+    myCar = {
+      ...myCar,
+      ...myUpgrade
+    }
 
     expect(myCar).toEqual({
       wheels: 6,

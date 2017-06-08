@@ -4,7 +4,7 @@
 describe('global', () => {
 
   it('what do you expect???', () => {
-    global.datum = __
+    global.datum = 2
 
     const actual = datum
 
@@ -12,6 +12,7 @@ describe('global', () => {
   })
 
   it('Should datum as a global be a function', () => {
+    global.fnc = () => {}
 
     const actual = fnc
 

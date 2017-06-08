@@ -4,7 +4,7 @@
 describe('Class in ES6', () => {
   describe('Like a function ...', () => {
     // Declare the Human class below that will satisfy all assertions
-    let Human
+    class Human {}
     it('should be a function', () => {
       expect(typeof Human).toEqual('function')
     })
@@ -13,6 +13,15 @@ describe('Class in ES6', () => {
   describe('Property ...', () => {
     // Declare and implement the Man class to satisfy all assertions below
     class Man {
+      constructor(name) {
+        if (!name) {
+          throw Error()
+        }
+
+        this.name = name
+      }
+
+      Walk(){}
     }
     it('should have a name property called Human', () => {
       expect(Man).toHaveProperty('name', 'Man')

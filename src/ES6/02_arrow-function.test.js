@@ -39,15 +39,15 @@ describe('Arrow function', () => {
 
       let actual = person.add(1)
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(2)
 
       actual = person.addThruCall(1)
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(2)
 
       actual = person.addThruApply(1)
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(2)
     })
   })
 
@@ -71,11 +71,13 @@ describe('Arrow function', () => {
 
       let actual = person.getAge()
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(10)
 
       actual = person.getAgeByArrow()
 
-      expect(actual).toEqual(__)
+      expect(actual).toEqual(undefined)
+
+      actual = person.getAgeProperty
     })
   })
 
@@ -90,7 +92,7 @@ describe('Arrow function', () => {
 
         let actual = foo(1)
 
-        expect(actual).toEqual(__)
+        expect(actual).toEqual(3)
 
       })
       it('Should use the argument object of bar', () => {
@@ -101,7 +103,7 @@ describe('Arrow function', () => {
 
         let actual = bar(1)
 
-        expect(actual).toEqual(__)
+        expect(actual).toEqual(3)
 
       })
     })

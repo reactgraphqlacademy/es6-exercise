@@ -6,7 +6,7 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', ()
   describe('by default, behaves like a normal string', () => {
 
     it('just surrounded by backticks', () => {
-      const str = ``
+      const str = `like a string`
       expect(str).toEqual('like a string')
     })
 
@@ -18,12 +18,12 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', ()
   describe('can evaluate variables, which are wrapped in "${" and "}"', () => {
 
     it('e.g. a simple variable "${x}" just gets evaluated', () => {
-      const evaluated = `x=#x`
+      const evaluated = `x=${x}`
       expect(evaluated).toEqual('x=' + x)
     })
 
     it('multiple variables get evaluated too', () => {
-      const evaluated = '${ x } + $ { y }'
+      const evaluated = `${ x }\+${ y }`
       expect(evaluated).toEqual(x + '+' + y)
     })
 
@@ -32,7 +32,7 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', ()
   describe('can evaluate any expression, wrapped inside "${...}"', () => {
 
     it('all inside "${...}" gets evaluated', () => {
-      const evaluated = `${ x } + ${ y }`
+      const evaluated = parseInt(`${ x + y }`)
       expect(evaluated).toEqual(x+y)
     })
 
@@ -40,7 +40,7 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or "', ()
       const getDomain = () => {
         return 'tddbin.com'
       }
-      const evaluated = `${ getDomain }`
+      const evaluated = `${ getDomain() }`
       expect(evaluated).toEqual('tddbin.com')
     })
 

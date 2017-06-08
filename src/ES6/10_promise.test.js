@@ -5,7 +5,7 @@
 describe('a Promise represents an operation that hasn`t completed yet, but is expected in the future', () => {
 
   it('`Promise` is a global function', () => {
-    const expectedType = '???'
+    const expectedType = 'function'
     expect(typeof Promise).toEqual(expectedType)
   })
 
@@ -13,6 +13,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
 
     it('resolve a promise by calling the `resolve` function given as first parameter', (done) => {
       let promise = new Promise((resolve) => {
+        resolve()
       })
 
       promise
@@ -20,8 +21,22 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve.')))
     })
 
+    it('the `resolve` function can return a value, that is consumed by the `promise.then()` callback', (done) => {
+      let promise = new Promise((resolve) => {
+        resolve()
+      })
+
+      promise
+        .then(value => {
+          expect(value).toEqual(42)
+          done() 
+        })
+        .catch(() => done(new Error('The promise is expected to resolve with 42!')))
+    })
+
     it('rejecting a promise is done by calling the callback given as 2nd parameter', (done) => {
-      let promise = new Promise(() => {
+      let promise = new Promise((resolve, reject) => {
+        reject()
       })
 
       promise
@@ -42,12 +57,12 @@ describe('a promise can be created in multiple ways', () => {
   describe('most commonly Promises get created using the constructor', () => {
 
     it('by passing a resolve function to it', () => {
-      const promise = new Promise(() => resolve())
+      const promise = new Promise((resolve) => resolve())
       return promise
     })
 
     it('by passing a resolve and a reject function to it', (done) => {
-      const promise = new Promise((resolve, reject) => resolve())
+      const promise = new Promise((resolve, reject) => reject())
 
       promise
         .then(() => done(new Error('Expected promise to be rejected.')))
@@ -69,7 +84,7 @@ describe('a promise can be created in multiple ways', () => {
       // Note: In that case you need to modify the expect!!!
       promise
         .then(value => {
-          expect(value).toEqual([1, 2])
+          expect(value).toEqual([1, 2, 3])
           done()
         })
         .catch(e => {
@@ -82,7 +97,7 @@ describe('a promise can be created in multiple ways', () => {
 
     it('is rejected if one rejects', (done) => {
       const promise = Promise.all([
-        new Promise(resolve => resolve(1))
+        new Promise((resolve, reject) => reject(1))
       ])
 
       promise
@@ -118,7 +133,7 @@ describe('chaining multiple promises can enhance readability', () => {
     it('`then()` receives the result of the promise it was called on', () => {
       const wordsPromise = Promise.resolve('one   space     between each     word')
       return wordsPromise
-        .then(string => removeMultipleSpaces())
+        .then(string => removeMultipleSpaces(string))
         .then(actual => {
           expect(actual).toEqual('one space between each word')
         })
@@ -131,6 +146,7 @@ describe('chaining multiple promises can enhance readability', () => {
       const wordsPromise = Promise.resolve('Sentence without       an end')
       return wordsPromise
         .then(removeMultipleSpaces)
+        .then(appendPeriod)
         .then(actual => {
           expect(actual).toEqual('Sentence without an end.')
         })
@@ -142,9 +158,9 @@ describe('chaining multiple promises can enhance readability', () => {
     it('order of the `then()`s matters', () => {
       const wordsPromise = Promise.resolve('Sentence without       an end ')
       return wordsPromise
-        .then(appendPeriod)
         .then(trim)
         .then(removeMultipleSpaces)
+        .then(appendPeriod)
         .then(actual => {
           expect(actual).toEqual('Sentence without an end.')
         })
