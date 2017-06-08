@@ -1,0 +1,22 @@
+{
+  "name": "es6-exercise",
+  "version": "0.0.1",
+  "description": "JavaScript ES6 Exercise",
+  "author": "LeanJS",
+  "license": "GPL3",
+  "devDependencies": {
+    "babel-jest": "^20.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "jest": "^20.0.0",
+    "regenerator-runtime": "^0.10.5"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "promise": "^7.1.1"
+  }
+}
