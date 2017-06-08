@@ -1,4 +1,4 @@
-# ES6 - ES7 - ESNext exercises
+# ES6 exercise
 
 ## Get started
 - Clone the repo
