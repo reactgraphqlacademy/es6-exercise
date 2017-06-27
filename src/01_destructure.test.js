@@ -4,7 +4,7 @@
 describe('destructuring arrays makes shorter code', () => {
 
   it('extract value from array, e.g. extract 0 into x like so `let [x] = [0]`', () => {
-    let [firstValue] = [1]
+    let firstValue = [1]
 
     expect(firstValue).toEqual(1)
   })
@@ -195,7 +195,7 @@ describe('assign object property values to new variables while destructuring', (
   describe('for function parameter names', () => {
     it('do it the same way, with a colon behind it', () => {
       const fn = ({x}) => {
-        
+
         expect(y).toEqual(1)
       }
       fn({x: 1})
