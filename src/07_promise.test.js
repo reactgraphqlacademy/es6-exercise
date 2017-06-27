@@ -45,15 +45,6 @@ describe('a promise can be created in multiple ways', () => {
       const promise = new Promise(() => resolve())
       return promise
     })
-
-    it('by passing a resolve and a reject function to it', (done) => {
-      const promise = new Promise((resolve, reject) => resolve())
-
-      promise
-        .then(() => done(new Error('Expected promise to be rejected.')))
-        .catch(done)
-    })
-
   })
 
 
@@ -79,20 +70,6 @@ describe('a promise can be created in multiple ways', () => {
           done()
         })
     }, 100)
-
-    it('is rejected if one rejects', (done) => {
-      const promise = Promise.all([
-        new Promise(resolve => resolve(1))
-      ])
-
-      promise
-        .then(() => {
-          const err = new NotRejectedError()
-          console.log(err)
-          done()
-        })
-        .catch(() => done())
-    })
 
   }, 100)
 
