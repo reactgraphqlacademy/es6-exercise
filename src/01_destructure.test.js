@@ -75,8 +75,7 @@ describe('destructuring objects', () => {
       expect(second).toEqual(42)
     })
     it('object and array', () => {
-      //const {z:[x]} = {z: [23, 42]}
-      const {z:[,x]} = {z: [23, 42]}
+      const {z:[x]} = {z: [23, 42]}
       expect(x).toEqual(42)
     })
     it('array and object', () => {
