@@ -14,7 +14,7 @@
     "regenerator-runtime": "^0.10.5"
   },
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch --noStackTrace "
   },
   "dependencies": {
     "promise": "^7.1.1"
