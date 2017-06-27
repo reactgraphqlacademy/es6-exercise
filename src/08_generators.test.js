@@ -55,11 +55,13 @@ describe('generator - `yield` is used to pause and resume a generator function',
 
     it('the value is "hello"', () => {
       const {value} = generator.next
+      
       expect(value).toEqual('hello')
     })
 
     it('and `done` is false', () => {
       const {done} = generator
+
       expect(done).toEqual(false)
     })
 
@@ -74,11 +76,13 @@ describe('generator - `yield` is used to pause and resume a generator function',
 
     it('`value` is "world"', () => {
       let {value} = secondItem
+
       expect(value).toEqual('world')
     })
 
     it('and `done` is still false', () => {
       const done = secondItem
+
       expect(done).toEqual(false)
     })
   })
@@ -89,6 +93,7 @@ describe('generator - `yield` is used to pause and resume a generator function',
       generator.next()
       generator.next()
       let done = generator.done
+
       expect(done).toEqual(true)
     })
 
@@ -111,6 +116,7 @@ describe('pass a value to a generator', () => {
     // way #2
     const iterator = generatorFunction()
     var iteratedOver = [iterator.next().___, iterator.___]
+
     expect(convertedToAnArray).toEqual(iteratedOver)
   })
 
@@ -121,6 +127,7 @@ describe('pass a value to a generator', () => {
     }
     const iterator = generatorFunction()
     const iteratedOver = [iterator.next().value, iterator.next(2).value]
+
     expect([1, 2]).toEqual(iteratedOver)
   })
 
@@ -133,6 +140,7 @@ describe('pass a value to a generator', () => {
       iterator.next('irrelevant').value,
       iterator.next(2).value
     ]
+
     expect(values).toEqual([1, 2])
   })
 
