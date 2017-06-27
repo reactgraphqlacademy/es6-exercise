@@ -6,7 +6,7 @@ describe('06 Arrow functions', () => {
       age: 1,
 
       add: function (age) {
-        // finish the implementation of the next function by using an arrow function
+        // finish the implementation of the next function using an arrow function
         // and using the parameter v
         function f(v) {
           return thils.age
