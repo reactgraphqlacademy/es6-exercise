@@ -186,7 +186,7 @@ describe('assign object property values to new variables while destructuring', (
 
   describe('for simple objects', () => {
     it('use a colon after the property name, like so `propertyName: newName`', () => {
-      const {x: newName} = {x: 1}
+      const {x: y} = {x: 1}
 
       expect(y).toEqual(1)
     })
@@ -194,7 +194,7 @@ describe('assign object property values to new variables while destructuring', (
 
   describe('for function parameter names', () => {
     it('do it the same way, with a colon behind it', () => {
-      const fn = ({x}) => {
+      const fn = ({x: y}) => {
 
         expect(y).toEqual(1)
       }
