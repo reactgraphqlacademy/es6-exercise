@@ -4,7 +4,7 @@
 describe('rest in function params', () => {
 
   it('must be the last parameter', () => {
-    const fn = (...rest, veryLast) => {
+    const fn = (firstOne, ...rest) => {
       expect([1, 2]).toEqual(rest)
     }
     fn(1, 2)
@@ -25,7 +25,7 @@ describe('rest in function params', () => {
 describe('rest with destructuring', () => {
 
   it('rest parameter must be last', () => {
-    const [...all, last] = [1, 2, 3, 4]
+    const [firstOne, ...all] = [1, 2, 3, 4]
 
     expect(all).toEqual([1, 2, 3, 4])
   })
@@ -47,7 +47,7 @@ describe('rest with destructuring', () => {
   it('`apply` made simple, even for constructors', () => {
     const theDate = [2015, 1, 1]
     const date = new Date(theDate)
-    
+
     expect(new Date(2015, 1, 1)).toEqual(date)
   })
 
