@@ -16,6 +16,9 @@
   "scripts": {
     "test": "jest --watch --noStackTrace "
   },
+  "jest": {
+   "testURL": "http://localhost/"
+  },
   "dependencies": {
     "promise": "^7.1.1"
   }
