@@ -12,7 +12,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
 
   describe('simplest promises', () => {
 
-    it('resolve a promise by calling the `resolve` function given as first parameter', (done) => {
+    it('resolve a promise by calling the `resolve` function given as first parameter of the function parameter', (done) => {
       let promise = new Promise((resolve) => {
       })
 
@@ -21,7 +21,7 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
         .catch(() => done(new Error('The promise is expected to resolve.')))
     })
 
-    it('rejecting a promise is done by calling the callback given as 2nd parameter', (done) => {
+    it('rejecting a promise is done by calling the callback given as 2nd parameter of the function parameter', (done) => {
       let promise = new Promise(() => {
       })
 
