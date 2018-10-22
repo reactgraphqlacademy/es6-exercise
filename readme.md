@@ -21,5 +21,5 @@ If you have npm:
 - You can fix them in any order, but we recommend you to start from test 01, then 02, and so on.
 - Once all the tests pass, you'll be an ES6 expert! :)
 
-## Articles
+## Articles and links
 - [JavaScript: The beauty of arrow functions](https://medium.com/leanjs/javascript-the-beauty-of-arrow-functions-2970efe5b4db)
