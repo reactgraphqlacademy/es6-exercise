@@ -23,3 +23,30 @@ If you have npm:
 
 ## Articles and links
 - [JavaScript: The beauty of arrow functions](https://medium.com/leanjs/javascript-the-beauty-of-arrow-functions-2970efe5b4db)
+
+Links to the relevant MDN docs for the topics covered:
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+
+
+You can also check out this list of more in depth articles on ES6: 
+
+https://hacks.mozilla.org/category/es6-in-depth/
