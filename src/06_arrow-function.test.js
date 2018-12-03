@@ -7,9 +7,9 @@ describe("06 Arrow functions", () => {
 
       add: function(age) {
         // finish the implementation of the next function using an arrow function
-        // and using the parameter v
-        function f(v) {
-          return this.age + v;
+        // so we can add some years to the current age and return the new age
+        function f(years) {
+          return this.age + years;
         }
 
         return f(age);
