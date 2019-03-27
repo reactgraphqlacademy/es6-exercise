@@ -21,6 +21,10 @@ If you have npm:
 - You can fix them in any order, but we recommend you to start from test 01, then 02, and so on.
 - Once all the tests pass, you'll be an ES6 expert! :)
 
+## Learning objectives
+
+- Understand the features of JavaScript ES6 that are essential to working with React
+
 ## Useful references
 
 Here are links to the docs where the points covered are addressed: 
