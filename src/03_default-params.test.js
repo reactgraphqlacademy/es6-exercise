@@ -1,39 +1,37 @@
 // 03: Default parameters - basics
 // To do: make all tests pass, leave the expect lines unchanged!
 
-describe('default parameters make function parameters more flexible', () => {
+describe("default parameters make function parameters more flexible", () => {
+  it("define it using an assignment to the parameter `function(param=1){}`", () => {
+    let number = int => int;
 
-  it('define it using an assignment to the parameter `function(param=1){}`', () => {
-    let number = (int) => int
+    expect(number()).toEqual(0);
+  });
 
-    expect(number()).toEqual(0)
-  })
-
-  it('it is not used when a value is given', () => {
+  it("it is not used when a value is given", () => {
     function xhr() {
-      return method
+      return method;
     }
 
-    expect(xhr('POST')).toEqual('POST')
-  })
+    expect(xhr()).toEqual("POST");
+  });
 
-  it('it is evaluated at run time', () => {
-    let defaultValue
+  it("it is evaluated at run time", () => {
+    let defaultValue;
     function xhr(method = `value: ${defaultValue}`) {
-      return method
+      return method;
     }
 
-    expect(xhr()).toEqual('value: 42')
-    defaultValue = 23
-  })
+    expect(xhr()).toEqual("value: 42");
+    defaultValue = 23;
+  });
 
-  it('it can also be a function', () => {
-    let defaultValue
+  it("it can also be a function", () => {
+    let defaultValue;
     function fn(value = defaultValue()) {
-      return value
+      return value;
     }
 
-    expect(fn()).toEqual(defaultValue())
-  })
-
-})
+    expect(fn()).toEqual(defaultValue());
+  });
+});
