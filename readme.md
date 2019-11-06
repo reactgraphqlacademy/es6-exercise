@@ -27,6 +27,8 @@ If you have npm:
 
 ## Useful references
 
+React GraphQL Academy article about the session: [https://reactgraphql.academy/react/must-know-javascript-for-react-developers/](https://reactgraphql.academy/react/must-know-javascript-for-react-developers/)
+
 Here are links to the docs where the points covered are addressed: 
 
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
