@@ -7,10 +7,10 @@ To solve this kind of exercise you don't have to know unit testing, since you wo
 ## Get started
 
 If you have yarn:
-`git clone git@github.com:leanjscom/es6-exercise.git && cd es6-exercise && yarn install`
+`git clone https://github.com/reactgraphqlacademy/es6-exercise.git && cd es6-exercise && yarn install`
 
 If you have npm:
-`git clone git@github.com:leanjscom/es6-exercise.git && cd es6-exercise && npm install`
+`git clone https://github.com/reactgraphqlacademy/es6-exercise.git && cd es6-exercise && npm install`
 
 ## Exercise
 - run `npm test` or `yarn test`, by default it will run all the tests.
