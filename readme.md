@@ -23,7 +23,7 @@ If you have npm:
 
 ## Articles and links
 
-- [Must know JavaScript for React developers](https://reactgraphql.academy/react/must-know-javascript-for-react-developers/)
+- [Lecture: Must know JavaScript for React developers](https://reactgraphql.academy/react/must-know-javascript-for-react-developers/)
 
 - [JavaScript: The beauty of arrow functions](https://medium.com/leanjs/javascript-the-beauty-of-arrow-functions-2970efe5b4db)
 
