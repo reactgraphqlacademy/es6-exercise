@@ -22,6 +22,9 @@ If you have npm:
 - Once all the tests pass, you'll be an ES6 expert! :)
 
 ## Articles and links
+
+- [Must know JavaScript for React developers](https://reactgraphql.academy/react/must-know-javascript-for-react-developers/)
+
 - [JavaScript: The beauty of arrow functions](https://medium.com/leanjs/javascript-the-beauty-of-arrow-functions-2970efe5b4db)
 
 Links to the relevant MDN docs for the topics covered:
